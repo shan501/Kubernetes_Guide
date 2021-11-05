@@ -53,9 +53,27 @@ is more complicated to set up , it is common for databases to be hosted outside 
 
 ## Kubernetes configuration
 The only way to communictae with the control panel is through the api server.We can access it through either the ui , api , or cli.
-We can use either yaml , or json files to do this.
+We can use either yaml , or json files to do this.Kubernetes configurations are declaritive.Which means if you specify in the 
+file that you want a certain amount of pods to be up , kubernetes will try to always have that amount of pods up.
 
+### Metadata
+There are three main parts of a configuration file.There is a metadata part which contains informations such as the name etc ... of the
+file.
 
+### Specification 
+Specification is the actual configuration of the pods you are deploying.How many pods to create etc ..... 
+
+### Status 
+Kubernetes will continiously monitor the current state of the cluster using etcd , and continously compare the state of the
+current cluster and make sure it is what you specified.Continously monitor if there are 3 pods runnning a database server etc ...
+
+## Minikube 
+This is used to test your pods before you put them into production.It might be really hard to set up a cluster locally with multiple master
+and work nodes with multiuple virtual machines.This tool will have the master processes and worker processes on the same node.Minikube is actally 
+ran on a docker container.
+
+## Kubectl 
+Kubectl is a command line tool for Kubernetes.
 
 
 
