@@ -39,6 +39,25 @@ want to store sensitive data , there is something called secret.For example a us
 your container.You can use secrets to do that.It is encoded in base-64 but there are third-party tools that can help you encrypt it.
 
 ### Volume
-The data generated on the pods are ephermeral so if you want to store the data permantly you can use volumes.
+The data generated on the pods are ephermeral so if you want to store the data permantly you can use volumes.The volumes can either be stored locallly
+or be stored remotely.
+
+### Deployment and StateFulSet 
+The service can also act as a load balancer.You can have multiple pods attached to a single service and have a failover.Typically 
+we dont just deploy pods in kubernets.We create Deployments.They are like templates for your pods. Configurations for your pods.You can
+create deployments for your web-app that replicates a main pod , and have a standby one.You can also do the same for databases but 
+you cant use Deployment for databases you would use StatefulSet.If you used Deployment , since the databases have to write to the same
+storage , their might be inconsistencies. We would use StatefulSet for Stateful apps or databases and deployent for stateless.Since stateful set
+is more complicated to set up , it is common for databases to be hosted outside of a kubernetes cluster.
+
+
+## Kubernetes configuration
+The only way to communictae with the control panel is through the api server.We can access it through either the ui , api , or cli.
+We can use either yaml , or json files to do this.
+
+
+
+
+
 
 
