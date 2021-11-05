@@ -73,7 +73,7 @@ and work nodes with multiuple virtual machines.This tool will have the master pr
 ran on a docker container.
 
 ## Kubectl 
-Kubectl is a command line tool for Kubernetes.
+Kubectl is a command line tool for Kubernetes.You will do the actual configuration of the cluster using kubectl CLI
 
 
 
